@@ -1,0 +1,183 @@
+/* Use Montserrat for headings and Open Sans for body text */
+body {
+  font-family: 'Open Sans', Arial, sans-serif; /* Easy to read for body */
+  background-color: #e6f4f1; /* Very light teal background for calmness */
+  color: #222; /* Dark text for readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for the header section */
+header {
+  background-color: #20b2aa; /* Teal for header */
+  padding: 0; /* Remove extra space */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+/* Style for the logo */
+.logo h1 {
+  margin: 0; /* Remove default margin */
+  color: #fff; /* White text color */
+  font-size: 2em; /* Make the logo text bigger */
+  font-family: 'Montserrat', Arial, sans-serif; /* Stylish, bold for logo */
+  padding: 10px 20px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Style for the navigation menu */
+nav {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+nav ul {
+  list-style-type: none; /* Remove bullet points */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  display: inline-block; /* Display menu items in a row */
+}
+
+nav ul li a {
+  color: #fff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  font-size: 1em; /* Slightly larger text */
+  font-family: 'Montserrat', Arial, sans-serif; /* Use Montserrat for nav links */
+  padding: 10px 18px; /* Add some padding */
+  display: block;
+  transition: background 0.2s; /* Smooth hover effect */
+  border-radius: 3px; /* Rounded corners */
+}
+
+nav ul li a:hover {
+  background-color: #178d87; /* Slightly darker teal */
+}
+
+/* Mission section styles */
+.mission {
+  background: linear-gradient(rgba(32,178,170,0.85), rgba(32,178,170,0.85)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat; /* Calm teal overlay with a travel image */
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px 40px 20px;
+  margin: 0;
+}
+
+.mission h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.2em;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.mission p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1.2em;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Destinations section styles */
+.destinations {
+  padding: 40px 15px 30px 15px;
+  background-color: #f0faf8; /* Light teal background for section */
+  text-align: center;
+}
+
+.destinations h2 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2em;
+  margin-bottom: 28px;
+  color: #178d87;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically by default (mobile first) */
+  gap: 24px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(32,178,170,0.08);
+  padding: 18px 16px 24px 16px;
+  max-width: 320px;
+  width: 100%;
+  min-height: 410px; /* Ensures all cards have the same minimum height */
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  max-width: 100%; /* Make sure image never exceeds card width */
+  height: auto; /* Keep image aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  color: #20b2aa;
+}
+
+.card p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 1em;
+  color: #333;
+  margin: 0;
+}
+
+/* Make the header look good on small screens (mobile first) */
+@media (max-width: 600px) {
+  header {
+    text-align: left;
+  }
+  .logo h1 {
+    display: block;
+    padding-bottom: 0;
+  }
+  nav {
+    display: block;
+    width: 100%;
+  }
+  nav ul {
+    text-align: left;
+  }
+  nav ul li {
+    display: block; /* Stack menu items vertically */
+    border-top: 1px solid #fff2;
+  }
+  nav ul li a {
+    padding: 12px 20px; /* Add some padding */
+  }
+}
+
+/* Desktop: show cards in a row and adjust spacing for larger screens */
+@media (min-width: 600px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+    gap: 32px; /* More space between cards on desktop */
+  }
+  .card {
+    min-width: 280px;
+    max-width: 320px;
+    min-height: 410px;
+    margin: 0;
+    padding: 24px 20px 32px 20px; /* More padding for desktop */
+  }
+}
